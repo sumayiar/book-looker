@@ -1,0 +1,12 @@
+{
+  "name": "book-looker",
+  "version": "1.0.0",
+  "description": "AI-powered book recommendation web app.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

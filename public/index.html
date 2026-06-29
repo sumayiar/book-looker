@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Looker</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="reader-panel" aria-labelledby="app-title">
+        <div class="brand-row">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span>Book Looker</span>
+        </div>
+
+        <div class="prompt-copy">
+          <p class="eyebrow">Your next read, tuned by AI</p>
+          <h1 id="app-title">What was the last book you read?</h1>
+          <p>
+            Name the book that is still hanging around in your head. Add the kind of reading mood you want next if you have one.
+          </p>
+        </div>
+
+        <form id="recommendation-form" class="book-form">
+          <label for="last-book">Last book read</label>
+          <input id="last-book" name="lastBook" type="text" placeholder="Example: The Seven Husbands of Evelyn Hugo" autocomplete="off" required />
+
+          <label for="reading-mood">Optional next-book mood</label>
+          <textarea id="reading-mood" name="readingMood" rows="4" placeholder="Example: something twisty but not too dark"></textarea>
+
+          <button type="submit">
+            <span aria-hidden="true">-></span>
+            Find my next book
+          </button>
+        </form>
+      </section>
+
+      <section class="results-panel" aria-live="polite">
+        <div class="shelf-visual" aria-hidden="true">
+          <div class="book-spine spine-one"></div>
+          <div class="book-spine spine-two"></div>
+          <div class="book-spine spine-three"></div>
+          <div class="book-spine spine-four"></div>
+          <div class="book-spine spine-five"></div>
+        </div>
+
+        <div class="results-heading">
+          <p class="eyebrow">Recommendations</p>
+          <h2 id="results-title">Waiting for your last read</h2>
+        </div>
+
+        <div id="status" class="status-message">
+          Tell Book Looker where you just came from, and it will map a few good paths forward.
+        </div>
+
+        <div id="recommendations" class="recommendation-grid"></div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
