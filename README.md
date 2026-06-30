@@ -22,6 +22,14 @@ Book Looker is a small AI-powered web app that asks what book someone last read,
 
 ## Notes
 
-- The API key is used only by `server.js`; it is never sent to the browser.
+- The API key is used only by the backend route; it is never sent to the browser.
 - Set `OPENAI_MODEL` in `.env` to change the recommendation model.
 - If no API key is configured, the app still opens and shows demo recommendations.
+
+## Deploy to Vercel
+
+This project is ready for Vercel:
+
+- Static files live in `public/`.
+- The recommendation endpoint lives in `api/recommend.js`.
+- Set `OPENAI_API_KEY` in the Vercel project environment variables to enable live AI recommendations.
